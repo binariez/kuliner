@@ -128,3 +128,22 @@ article {
 /* .container {
   background: url("gambar/background2.jpg");
 } */
+
+@media only screen and (max-width: 700px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  li img {
+    width: 80%;
+    height: 80%;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .popup-container #artikel1 {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
