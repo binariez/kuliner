@@ -21,6 +21,10 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px 80px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 li {
@@ -30,6 +34,7 @@ li {
 li img {
   border-radius: 20em 10em 20em 10em;
   height: 250px;
+  box-shadow: 10px 15px 28px -8px rgba(0, 0, 0, 0.75);
 }
 
 li img:hover {
@@ -46,12 +51,18 @@ article {
   position: absolute;
 }
 
+footer {
+  text-align: center;
+  background-color: rgb(214, 166, 104);
+  font-family: "Consolas";
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 97.2vh;
   background: url("https://user-images.githubusercontent.com/12056958/175311291-2bef88d8-c6ae-4f87-8bdf-74cc3fa68854.jpg");
   background-size: cover;
   transition: filter 0.5s;
@@ -73,14 +84,16 @@ article {
   flex-direction: column;
   opacity: 1;
   transition: all 0.2s;
-}
-
-.popup-container #artikel1 {
-  /* background-image: url("gambar/kuliner/rendang.webp"); */
   background: rgba(255, 255, 255, 0.35);
   background-size: cover;
   border-radius: 7em 2em 7em 2em;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.active.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
 }
 
 .close-icon {
@@ -94,54 +107,38 @@ article {
   color: orangered;
 }
 
-.active.popup-container {
-  visibility: hidden;
-  opacity: 0;
-  top: 10%;
-}
-/* .background-img {
-  background-image: url("gambar/background2.jpg");
-  background-size: cover;
-  filter: blur(5px);
-  -webkit-filter: blur(2px);
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 1;
-}
-
-.container {
-  top: 100px;
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-left: 20px;
-  margin-right: 20px;
-  z-index: 2;
-} */
-
-/* .container {
-  background: url("gambar/background2.jpg");
-} */
-
 @media only screen and (max-width: 700px) {
   ul {
     display: flex;
     flex-direction: column;
-  }
-  li img {
-    width: 80%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10em 10em 10em 10em/5em 5em;
+    padding: 50 80px;
+    /* box-shadow: 1px 1px 1 px rgba(0, 0, 0, 0.3); */
     height: 80%;
+    width: 95%;
   }
+
+  li img {
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 0px 1px rgba(0, 0, 0, 0.35);
+  }
+
   h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
+
+  .popup-container {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .popup-container #artikel1 {
+    padding: 0px 10px;
+    position: absolute;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
