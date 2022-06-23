@@ -52,7 +52,7 @@ article {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url(gambar/background.jpg);
+  background: url("https://user-images.githubusercontent.com/12056958/175311291-2bef88d8-c6ae-4f87-8bdf-74cc3fa68854.jpg");
   background-size: cover;
   transition: filter 0.5s;
 }
