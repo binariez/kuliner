@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+li img {
+  border-radius: 20em 10em 20em 10em;
+  height: 250px;
+}
+
+li img:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+article {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url(gambar/background.jpg);
+  background-size: cover;
+  transition: filter 0.5s;
+}
+
+.active.container {
+  filter: blur(5px) brightness(0.7);
+}
+
+.popup-container {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  height: auto;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.popup-container #artikel1 {
+  /* background-image: url("gambar/kuliner/rendang.webp"); */
+  background: rgba(255, 255, 255, 0.35);
+  background-size: cover;
+  border-radius: 7em 2em 7em 2em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-icon {
+  position: absolute;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  color: orangered;
+}
+
+.active.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
+}
+/* .background-img {
+  background-image: url("gambar/background2.jpg");
+  background-size: cover;
+  filter: blur(5px);
+  -webkit-filter: blur(2px);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+.container {
+  top: 100px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 20px;
+  margin-right: 20px;
+  z-index: 2;
+} */
+
+/* .container {
+  background: url("gambar/background2.jpg");
+} */
